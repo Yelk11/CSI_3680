@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 import re
 import json
 
-url = 'https://www.epicurious.com'
-
 
 
 
@@ -27,25 +25,39 @@ def scrape_page(url):
 
   data = json.loads(soup.find('script', type='application/ld+json').text)
 
-  directions = []
+  directions = ""
   for line in data['recipeInstructions']:
-    directions.append(line['text'])
+    directions+=line['text']
   json_obj = {}
   json_obj['name'] = data['name']
   json_obj['ingredients'] = data['recipeIngredient']
   json_obj['directions'] = directions
-  return json.dumps(json_obj)
+  return json_obj
 
-def do_it(url):
+def epicurious_scraper(cuisine):
+  url = 'https://www.epicurious.com/search/?cuisine=' + cuisine
   url_list = grab_all_links(url)
-  json_obj = {'larry':0}
-  json_list = []
+  total = {}
+  total['recipe'] = []
   for item in url_list:
-    json_list.append(scrape_page(url+item))
-  print(json_list)
-  for item in json_list:
+    json_obj = scrape_page(url+item)
+    total['recipe'].append(json_obj)
+  with open('data.json', 'w', encoding='utf-8') as f:
+    json.dump(total, f, ensure_ascii=False, indent=4)
     
+def get_cuisines():
+  cuisines = [
+    "italian",
+    "mexican",
+    "moroccan",
+    "french",
+    "asian",
+    "indian",
+    "thai",
+    "mediterranean"
+  ]
+  return cuisines
 
-do_it(url)
+epicurious_scraper('italian')
 
 
