@@ -36,7 +36,7 @@ def scrape_page(url):
   return json_obj
 
 
-# Jared use this one
+# Jared use this one to get the json of a cuisine
 def epicurious_scraper(cuisine):
   url = 'https://www.epicurious.com/search/?cuisine=' + cuisine
   base_url = 'https://www.epicurious.com'
@@ -64,6 +64,6 @@ def get_cuisines():
     "mediterranean"
   ]
   return cuisine
-epicurious_scraper("italian")
+
 
 
