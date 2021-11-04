@@ -30,7 +30,5 @@ def yummly(category):
   for url in link_list:
     recipe_list.append(get_recipe(url))
 
-  print(recipe_list)
-
-yummly('italian')
+yummly('mexican')
 print(json)
