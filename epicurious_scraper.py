@@ -48,9 +48,9 @@ recipes[{
       "2 Tbsp. extra-virgin olive oil"
    ],
    "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine.",
-      "Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better).",
-      "Roll out pasta according to pasta machine directions or roll out and cut by hand."
+      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
+      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
+      Roll out pasta according to pasta machine directions or roll out and cut by hand."
    ]
 },
 {
@@ -63,9 +63,9 @@ recipes[{
       "2 Tbsp. extra-virgin olive oil"
    ],
    "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine.",
-      "Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better).",
-      "Roll out pasta according to pasta machine directions or roll out and cut by hand."
+      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
+      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
+      Roll out pasta according to pasta machine directions or roll out and cut by hand."
    ]
 },
 {
@@ -78,11 +78,12 @@ recipes[{
       "2 Tbsp. extra-virgin olive oil"
    ],
    "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine.",
-      "Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better).",
-      "Roll out pasta according to pasta machine directions or roll out and cut by hand."
+      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
+      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
+      Roll out pasta according to pasta machine directions or roll out and cut by hand."
    ]
-}]
+}
+]
 '''
 
 print(scrape_page('https://www.epicurious.com/recipes/food/views/gluten-free-fresh-pasta'))
