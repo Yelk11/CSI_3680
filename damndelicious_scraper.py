@@ -5,9 +5,9 @@ def get_recipe(url):
   scraper = scrape_me('https://www.yummly.com'+ url)
   print(scraper.title())
 
-def steamyKitchen(category):
-  steamyKitchen = "https://www.yummly.com/recipes?q=" + category + "&taste-pref-appended=true"
-  scraper = scrape_me(steamyKitchen)
+def yummly(category):
+  yummly = "https://www.yummly.com/recipes?q=" + category + "&taste-pref-appended=true"
+  scraper = scrape_me(yummly)
   
   #grab all links on search page
   link_list = []
@@ -17,10 +17,19 @@ def steamyKitchen(category):
         link_list.append(link)
   print(link_list)
   
+  # recipe_list = []
+  # for url in link_list:
+  #   recipe_list.append('https://www.yummly.com'+ url)
+  # print(recipe_list)
+
+  urlList = []
+
   recipe_list = []
   for url in link_list:
     recipe_list.append(get_recipe(url))
   print(recipe_list)
 
+  # print(json_dump)
 
-steamyKitchen('mexican')
+
+yummly('mexican')
