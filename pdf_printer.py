@@ -23,7 +23,11 @@ pdf.cell(40, 10, ingredients[0], ln=True)
 
 pdf.cell(40, 10, ingredients[1], ln=True)
 
-pdf.cell(40, 10, ingredients[2])
+pdf.cell(40, 10, ingredients[2], ln=True)
 
+with open('example.json') as f:
+    recipes = json.load(f)
+
+print(recipes)
 
 pdf.output('recipes.pdf')
