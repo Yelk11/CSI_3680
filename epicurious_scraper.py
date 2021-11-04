@@ -1,93 +1,48 @@
-
-
-'''
-Input:
-get_recipe_list(cuisine)
-cuisine:
-    Italian
-    Mexican
-    Moroccan
-    French
-    Asian
-    Indian
-    Thai
-    Mediterranean
-
-Name
-    ingredient and ammount
-
-x = {
-
-  "Name": None,
-  "ingredient_list": [
-    {"ingredient": "oregeno", "amount": 2, "Unit": "Cups"},
-    {"ingredient": "tomatoe paste", "amount": 9, "Unit": "Ounces"},
-    {"ingredient": "oregeno", "amount": 2, "Unit": "Cups"},
-  ]
-}
-
-'''
-
-import json
-from recipe_scrapers import scrape_me
+import requests
+from bs4 import BeautifulSoup
 import re
+import json
+
+url = 'https://www.epicurious.com'
 
 
-# dont call this method!!
-def get_recipe(url):
-  scraper = scrape_me('https://www.epicurious.com'+ url)
+
+
+def grab_all_links(url):
+  reqs = requests.get(url)
+  soup = BeautifulSoup(reqs.text, 'html.parser')
+  urls = []
+  for link in soup.find_all('a'):
+    a_link = link.get('href')
+    if bool(re.search('/recipes/food/views/',a_link)) and a_link not in urls:
+      urls.append(a_link)
+  return urls
+
+
+
+def scrape_page(url):
+  # get html
+  reqs = requests.get(url)
+  soup = BeautifulSoup(reqs.text, 'html.parser')
+
+  data = json.loads(soup.find('script', type='application/ld+json').text)
+  title = data['name']
+  ingredient_list = data['recipeIngredient']
+  directions = []
+  for line in data['recipeInstructions']:
+    directions.append(line)
   
-  try:
-    print(scraper.title())
-  except:
-    print("no title found")
-
-  # print(scraper.title())
-  # print("hello")
-  # x = [
-  #   {
-  #     "Name": scraper.title(),
-  #     "Ingredients":scraper.ingredients()
-  #   }
-  # ]
-  #return x
-
-# Jared, use this method. It will return a JSON object that you pass to Nick
-def get_recipe_list(cuisine):
-  search_url = "https://www.epicurious.com/search/?cuisine=" + cuisine + "&content=recipe"
-  scraper = scrape_me(search_url)
   
-  #grab all links on search page
-  link_list = []
-  for line in scraper.links():
-      link = line.get('href')
-      if re.search("/recipes/food/views/", link) and link not in link_list:
-        link_list.append(link)
   
-  recipe_list = []
-  for url in link_list:
-    recipe_list.append(get_recipe(url))
-  print(recipe_list)
-
-  #return my_json
-
-
-
-
-# Driver function to test
-get_recipe_list("italian")
+  # with open("output1.html", "w",encoding="utf-8") as file:
+  #   file.write(str(soup))
+  # file.close()
 
 
 
 
 
+scrape_page('https://www.epicurious.com/recipes/food/views/gluten-free-fresh-pasta')
 
-  
-scraper.total_time()
-scraper.yields()
 
-scraper.instructions()
-scraper.image()
-scraper.host()
-scraper.links()
-scraper.nutrients()  # if available
+grab_all_links(url)
