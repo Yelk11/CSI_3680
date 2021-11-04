@@ -12,8 +12,11 @@ def grab_all_links(url):
   urls = []
   for link in soup.find_all('a'):
     a_link = link.get('href')
-    if bool(re.search('/recipes/food/views/',a_link)) and a_link not in urls:
-      urls.append(a_link)
+    try:
+      if bool(re.search('/recipes/food/views/',a_link)) and a_link not in urls:
+        urls.append(a_link)
+    except:
+      print("Link not found")
   return urls
 
 
@@ -25,9 +28,9 @@ def scrape_page(url):
 
   data = json.loads(soup.find('script', type='application/ld+json').text)
 
-  directions = ""
+  directions = []
   for line in data['recipeInstructions']:
-    directions+=line['text']
+    directions.append(line['text'])
   json_obj = {}
   json_obj['name'] = data['name']
   json_obj['ingredients'] = data['recipeIngredient']
@@ -36,7 +39,7 @@ def scrape_page(url):
 
 def epicurious_scraper(cuisine):
   url = 'https://www.epicurious.com/search/?cuisine=' + cuisine
-  url_list = grab_all_links(url)
+  url_list = grab_all_links(str(url))
   total = {}
   total['recipe'] = []
   for item in url_list:
@@ -46,7 +49,7 @@ def epicurious_scraper(cuisine):
     json.dump(total, f, ensure_ascii=False, indent=4)
     
 def get_cuisines():
-  cuisines = [
+  cuisine = [
     "italian",
     "mexican",
     "moroccan",
@@ -56,8 +59,7 @@ def get_cuisines():
     "thai",
     "mediterranean"
   ]
-  return cuisines
-
-epicurious_scraper('italian')
+  return cuisine
+epicurious_scraper("italian")
 
 
