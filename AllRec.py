@@ -28,7 +28,7 @@ def yummly(category):
   json = []
   recipe_list = []
   for url in link_list:
-    recipe_list.append(get_recipe(url))
+    recipe_list.append(url)
 
 yummly(input('Please enter the type of cuisine you want to search for: '))
 print(json)
