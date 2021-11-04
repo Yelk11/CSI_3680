@@ -36,57 +36,16 @@ def scrape_page(url):
   json_obj['directions'] = directions
   return json.dumps(json_obj)
 
+def do_it(url):
+  url_list = grab_all_links(url)
+  json_obj = {'larry':0}
+  json_list = []
+  for item in url_list:
+    json_list.append(scrape_page(url+item))
+  print(json_list)
+  for item in json_list:
+    
 
-'''
-recipes[{
-   "name":"Gluten-Free Fresh Pasta",
-   "ingredients":[
-      "1 cup gluten-free flour blend (such as Bob\u2019s Red Mill Gluten Free 1-to-1 Baking Flour)",
-      "\u00be cup chickpea flour",
-      "1 tsp. Diamond Crystal or \u00bd tsp. Morton kosher salt",
-      "3 large eggs",
-      "2 Tbsp. extra-virgin olive oil"
-   ],
-   "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
-      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
-      Roll out pasta according to pasta machine directions or roll out and cut by hand."
-   ]
-},
-{
-   "name":"Gluten-Free Fresh Pasta",
-   "ingredients":[
-      "1 cup gluten-free flour blend (such as Bob\u2019s Red Mill Gluten Free 1-to-1 Baking Flour)",
-      "\u00be cup chickpea flour",
-      "1 tsp. Diamond Crystal or \u00bd tsp. Morton kosher salt",
-      "3 large eggs",
-      "2 Tbsp. extra-virgin olive oil"
-   ],
-   "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
-      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
-      Roll out pasta according to pasta machine directions or roll out and cut by hand."
-   ]
-},
-{
-   "name":"Gluten-Free Fresh Pasta",
-   "ingredients":[
-      "1 cup gluten-free flour blend (such as Bob\u2019s Red Mill Gluten Free 1-to-1 Baking Flour)",
-      "\u00be cup chickpea flour",
-      "1 tsp. Diamond Crystal or \u00bd tsp. Morton kosher salt",
-      "3 large eggs",
-      "2 Tbsp. extra-virgin olive oil"
-   ],
-   "directions":[
-      "Whisk together gluten-free flour blend, chickpea flour, and salt in a large bowl. Whisk eggs and oil in a small bowl to combine. 
-      Add egg mixture to dry ingredients and stir with a fork to incorporate; mixture will be crumbly. Tip out onto a surface and knead until a smooth dough forms, about 3 minutes. Form dough into a ball and wrap tightly in plastic. Chill at least 1 hour and up to 1 day to allow flour to hydrate (the longer you can let it rest, the better). 
-      Roll out pasta according to pasta machine directions or roll out and cut by hand."
-   ]
-}
-]
-'''
-
-print(scrape_page('https://www.epicurious.com/recipes/food/views/gluten-free-fresh-pasta'))
+do_it(url)
 
 
-grab_all_links(url)
