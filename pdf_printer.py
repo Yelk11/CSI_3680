@@ -2,19 +2,18 @@
 
 #Project
 
-import PyPDF2
 import json
-
-pdfWriter = PyPDF2.PdfFileWriter()
-for i in range(1):
-    pdfWriter.addBlankPage(219, 297)
+from fpdf import FPDF
 
 title = "spaghetti"
 instructions = "r4fgfvefjwegfdwvfgjw"
 ingredients = ["er4e", "reref", "3ewrfe"]
+pdf = FPDF('P', 'mm', 'A4')
 
-pdfOutputFile = open('recipe.pdf','wb')
+pdf.add_page()
 
-pdfWriter.write(pdfOutputFile)
+pdf.set_font('times', '', 14)
 
-pdfOutputFile.close()
+pdf.cell(40, 10, title)
+
+pdf.output('recipes.pdf')
