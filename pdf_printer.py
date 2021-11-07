@@ -2,6 +2,7 @@
 
 #Project
 
+import epicurious_scraper as epic
 import json
 from fpdf import FPDF
 
@@ -9,12 +10,23 @@ pdf = FPDF('P', 'mm', 'A4')
 
 pdf.add_page()
 
-pdf.set_font('times', '', 14)
+pdf.set_font('times', '', 12)
 
-with open('example.json') as f:
-    recipes = json.load(f)
+matt = epic.epicurious_scraper("mexican")
 
-recipesStr = json.dumps(recipes)
+recipes = json.loads(matt)
+
+
+#for recipe in recipes["recipe"]:
+    #pdf.cell(0, 10, recipe["name"], ln=True)
+    #for ingredient in recipe["ingredients"]:
+        #print(ingredient)
+        #pdf.cell(0, 10, ingredientStr, ln=True)
+    #print(recipe["directions"])
+    #pdf.multi_cell(0, 10, recipe["directions"][0])
+    
+
+recipesStr = json.dumps(matt)
 
 pdf.multi_cell(0, 10, recipesStr)
 
