@@ -10,25 +10,25 @@ pdf = FPDF('P', 'mm', 'A4')
 
 pdf.add_page()
 
-pdf.set_font('times', '', 12)
+pdf.add_font("Roboto Slab", '', "RobotoSlab-Regular.ttf", uni=True)
+
+pdf.set_font('Roboto Slab', '', 12)
 
 matt = epic.epicurious_scraper("mexican")
 
 recipes = json.loads(matt)
 
 
-#for recipe in recipes["recipe"]:
-    #pdf.cell(0, 10, recipe["name"], ln=True)
-    #for ingredient in recipe["ingredients"]:
-        #print(ingredient)
-        #pdf.cell(0, 10, ingredientStr, ln=True)
-    #print(recipe["directions"])
-    #pdf.multi_cell(0, 10, recipe["directions"][0])
+for recipe in recipes["recipe"]:
+    pdf.cell(0, 10, recipe["name"], ln=True)
+    for ingredient in recipe["ingredients"]:
+        pdf.set_font('Roboto Slab', '', 10)
+        pdf.cell(0, 10, ingredient, ln=True)
+    #pdf.multi_cell(0, 10, recipe["directions"])
     
 
-#METHOD THAT PRINTS JSON as String
-recipesStr = json.dumps(matt)
-
-pdf.multi_cell(0, 10, recipesStr)
+#METHOD THAT PRINTS JSON as String - Last Resort
+#recipesStr = json.dumps(matt)
+#pdf.multi_cell(0, 10, recipesStr)
 
 pdf.output('recipes.pdf')
