@@ -26,6 +26,7 @@ recipes = json.loads(matt)
     #pdf.multi_cell(0, 10, recipe["directions"][0])
     
 
+#METHOD THAT PRINTS JSON as String
 recipesStr = json.dumps(matt)
 
 pdf.multi_cell(0, 10, recipesStr)
