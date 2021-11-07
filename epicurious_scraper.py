@@ -23,8 +23,9 @@ def scrape_page(url):
   # get html
   reqs = requests.get(url)
   soup = BeautifulSoup(reqs.text, 'html.parser')
-
-  data = json.loads(soup.find('script', type='application/ld+json').text)
+  
+  text = soup.find("script",type="application/ld+json", text=True)
+  data = json.loads(text.contents[0])
   
   directions = []
   for line in data['recipeInstructions']:
@@ -49,7 +50,7 @@ def epicurious_scraper(cuisine):
   # dump json to file if needed
   # with open('data.json', 'w', encoding='utf-8') as f:
   #   json.dump(total, f, ensure_ascii=False, indent=4)
-  return total
+  return json.dumps(total, indent=4)
 
 # Jared, use this to get the cuisines
 def get_cuisines():
@@ -66,4 +67,5 @@ def get_cuisines():
   return cuisine
 
 
+print(epicurious_scraper('mexican'))
 
