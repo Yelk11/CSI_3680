@@ -13,13 +13,12 @@ def get_recipe(url):
         "ingredients" : scraper.ingredients(),
         "instructions" : scraper.instructions()
     }
-  
-    # Serializing json 
-    json_object = json.dumps(dictionary, indent = 4)
+# Serializing json 
+json_object = json.dumps(dictionary, indent = 4)
       
     # Writing to sample.json
-    with open("sample.json", "w") as outfile:
-        outfile.write(json_object)
+with open("sample.json", "w") as outfile:
+    outfile.write(json_object)
 
 def yummly(category):
   yummly = "https://www.yummly.com/recipes?q=" + category + "&taste-pref-appended=true"
@@ -38,4 +37,5 @@ def yummly(category):
     recipe_list.append(get_recipe(url))
 
 yummly = (input('Please enter the type of cuisine you want to search for: '))
+
 
