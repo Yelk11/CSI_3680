@@ -37,5 +37,5 @@ def yummly(category):
   for url in link_list:
     recipe_list.append(get_recipe(url))
 
-yummly(input('Please enter the type of cuisine you want to search for: '))
+yummly = (input('Please enter the type of cuisine you want to search for: '))
 
