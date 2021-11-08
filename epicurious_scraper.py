@@ -33,7 +33,7 @@ def scrape_page(url):
   json_obj = {}
   json_obj['name'] = data['name']
   json_obj['ingredients'] = data['recipeIngredient']
-  json_obj['directions'] = directions
+  # json_obj['directions'] = directions
   return json_obj
 
 
@@ -50,7 +50,7 @@ def epicurious_scraper(cuisine):
   # dump json to file if needed
   # with open('data.json', 'w', encoding='utf-8') as f:
   #   json.dump(total, f, ensure_ascii=False, indent=4)
-  return json.dumps(total, indent=4)
+  return json.dumps(total, indent=4).encode('latin-1')
 
 # Jared, use this to get the cuisines
 def get_cuisines():
@@ -67,5 +67,5 @@ def get_cuisines():
   return cuisine
 
 
-print(epicurious_scraper('mexican'))
+# print(epicurious_scraper('mexican'))
 

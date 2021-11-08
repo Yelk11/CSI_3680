@@ -1,0 +1,578 @@
+{
+    "recipe": [
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "1 cup long grain white rice",
+                "2 cups chicken broth (low-sodium)",
+                "1 tablespoon olive oil",
+                "1 small yellow onion (diced)",
+                "4 cloves garlic (finely minced)",
+                "1/4 cup tomato paste",
+                "1 tablespoon lime juice (from about 1 lime)",
+                "1/2 cup chopped cilantro (freshly)",
+                "2 teaspoons cumin",
+                "salt (to taste)"
+            ]
+        },
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "2 tablespoons butter",
+                "1 small onion (diced)",
+                "1 jalapeno (seeded and minced, optional)",
+                "1 cup long grain white rice",
+                "1/2 teaspoon cumin",
+                "1/4 teaspoon oregano",
+                "1/2 teaspoon chili powder",
+                "1 3/4 cups chicken broth",
+                "2/3 cup tomato sauce",
+                "lime (optional)",
+                "cilantro (optional)"
+            ]
+        },
+        {
+            "name": "Mexican Picadillo",
+            "ingredients": [
+                "14 ounces fire roasted tomatoes (canned, or 4 Roma tomatoes)",
+                "1/2 poblano peppers (roughly chopped)",
+                "4 garlic cloves (whole)",
+                "1 bunch fresh cilantro",
+                "1 onion (cut into large chunks, for the sofrito)",
+                "1 teaspoon kosher salt",
+                "1/4 teaspoon ground black pepper",
+                "1 yellow onion (diced)",
+                "4 garlic cloves (diced)",
+                "1 tablespoon tomato paste",
+                "2 bay leaves",
+                "2 teaspoons ground cumin",
+                "2 teaspoons dried oregano",
+                "kosher salt",
+                "black pepper",
+                "1/2 cup dry white wine",
+                "1 1/2 pounds ground beef",
+                "2 teaspoons chili powder",
+                "2 yukon gold potatoes (medium, peeled and diced)",
+                "2 carrots (peeled and diced)"
+            ]
+        },
+        {
+            "name": "Mexican Black Bean & Cheese Stuffed Peppers",
+            "ingredients": [
+                "4 bell peppers (large)",
+                "1/2 yellow onion (medium)",
+                "2 cloves garlic",
+                "1/4 cup cilantro (optional, plus more for serving)",
+                "1 tablespoon extra-virgin olive oil",
+                "1 teaspoon salt",
+                "1/4 teaspoon black pepper",
+                "2 teaspoons ground cumin",
+                "1 teaspoon ground coriander",
+                "1 teaspoon chili powder (mild)",
+                "1 teaspoon dried oregano",
+                "1 can petite diced tomatoes (14.5 oz. per can)",
+                "1 can mild hatch green chilis (4 oz. per can)",
+                "1 1/2 cups cooked brown rice",
+                "1 can black beans (14 oz. per can, drained and rinsed)",
+                "1/2 cup shredded mexican cheese blend (for filling)",
+                "1/4 cup shredded mexican cheese blend (for topping)",
+                "nonstick cooking spray",
+                "chopped fresh parsley (optional, for serving)"
+            ]
+        },
+        {
+            "name": "Easy Mexican Chicken and Rice Casserole",
+            "ingredients": [
+                "4 cups cooked rice (1-1 1/3 cup uncooked, depending on rice type)",
+                "nonstick cooking spray",
+                "3 cups cooked chicken (diced or shredded)",
+                "2 1/4 cups prepared salsa",
+                "1/2 cup sour cream",
+                "2 scallions (large, minced)",
+                "1 1/2 teaspoons ground cumin",
+                "3/4 teaspoon garlic powder",
+                "1/2 teaspoon dried oregano",
+                "1 teaspoon salt",
+                "1/4 teaspoon black pepper",
+                "1/2 cup shredded Mexican blend cheese (for casserole)",
+                "1 cup shredded Mexican blend cheese (for topping)"
+            ]
+        },
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "1 cup rice",
+                "2 cups chicken broth",
+                "1 tablespoon butter",
+                "1 tablespoon olive oil",
+                "1 onion (small, diced)",
+                "4 cloves garlic (minced)",
+                "1/4 cup tomato paste",
+                "1 tablespoon lime juice",
+                "1/2 cup cilantro",
+                "1 tablespoon cumin (You can use less if you prefer, I just like the flavor.)",
+                "salt (to taste)"
+            ]
+        },
+        {
+            "name": "Mexican Corn Dip",
+            "ingredients": [
+                "2 tablespoons unsalted butter",
+                "5 ears corn (shucked and rinsed)",
+                "1 jalape\u00f1o (seeded and diced)",
+                "3 tablespoons mayonnaise",
+                "2 tablespoons cotija cheese (crumbled)",
+                "2 tablespoons cilantro leaves (chopped fresh)",
+                "1 teaspoon chili powder (or more, to taste)",
+                "1 clove garlic (pressed)",
+                "1 lime"
+            ]
+        },
+        {
+            "name": "Mexican Street Tacos",
+            "ingredients": [
+                "2 tablespoons reduced sodium soy sauce",
+                "2 tablespoons lime juice (freshly squeezed)",
+                "2 tablespoons canola oil (divided)",
+                "3 cloves garlic (minced)",
+                "2 teaspoons chili powder",
+                "1 teaspoon ground cumin",
+                "1 teaspoon dried oregano",
+                "1 1/2 pounds skirt steak (cut into 1/2-inch pieces)",
+                "12 flour tortillas (mini)",
+                "3/4 cup diced red onion",
+                "1/2 cup cilantro leaves (chopped fresh)",
+                "1 lime (cut into wedges)"
+            ]
+        },
+        {
+            "name": "Skinny Mexican Casserole",
+            "ingredients": [
+                "1 tablespoon olive oil",
+                "2 cloves garlic (minced)",
+                "1 onion (diced)",
+                "1 red bell pepper (diced)",
+                "1 green bell pepper (diced)",
+                "15 ounces black beans (drained and rinsed)",
+                "1 cup corn kernels (frozen, canned or roasted)",
+                "1 teaspoon chili powder",
+                "1/2 teaspoon cumin",
+                "kosher salt",
+                "ground black pepper",
+                "4.5 ounces Old El Paso chopped green chiles (drained)",
+                "2 tablespoons cilantro leaves (chopped fresh)",
+                "4 whole wheat tortillas (chopped)",
+                "16 ounces fat-free refried beans (Old El Paso\u2122, warmed)",
+                "10 ounces enchilada sauce (Old El Paso\u2122 mild)",
+                "1 1/2 cups mexican blend cheese (reduced fat shredded)"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn (Elote)",
+            "ingredients": [
+                "1/4 cup mayonnaise",
+                "1/4 cup sour cream (or Mexican crema)",
+                "1/2 cup feta cheese (or finely crumbled Cojita, plus for more serving)",
+                "1/2 teaspoon ancho chile powder (or guajillo chile powder, plus more for serving)",
+                "1 clove garlic (finely minced)",
+                "1/4 cup cilantro leaves (finely chopped, and tender stems)",
+                "4 ears corn (shucked)",
+                "1 lime (cut into wedges, for serving)"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn Salad",
+            "ingredients": [
+                "5 ears fresh corn (roasted, grilled or boiled)",
+                "1 tablespoon lime juice",
+                "2 tablespoons avocado oil",
+                "2 seeds (Jalape\u00f1os -, /stems removed, finely chopped)",
+                "1 cup cherry tomatoes (halved)",
+                "1 handful cilantro (chopped)",
+                "1 teaspoon chili powder",
+                "1/4 cup queso fresco (Crumbled, + more for serving)",
+                "salt"
+            ]
+        },
+        {
+            "name": "Mexican Flan",
+            "ingredients": [
+                "flan",
+                "14 ounces sweetened condensed milk",
+                "1 1/2 cups whole milk",
+                "2 ounces cream cheese",
+                "5 large eggs",
+                "1 teaspoon vanilla extract",
+                "1 vanilla bean (optional)",
+                "1/3 cup granulated white sugar",
+                "caramel",
+                "1 cup granulated sugar",
+                "1/2 cup water"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn Salad",
+            "ingredients": [
+                "1 tablespoon olive oil",
+                "4 cups corn kernels (thawed, if frozen)",
+                "1/2 cup diced red onion",
+                "1 jalapeno (seeded and minced)",
+                "1/2 cup green onion (chopped)",
+                "1/2 cup chopped fresh cilantro",
+                "4 ounces cheese (Cojita, crumbled)",
+                "3 tablespoons sour cream",
+                "3 tablespoons mayonnaise",
+                "2 limes",
+                "1 teaspoon cayenne pepper",
+                "1 teaspoon chili powder",
+                "kosher salt",
+                "ground pepper"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn Salad",
+            "ingredients": [
+                "4 cups corn (about 5 ears, cut from the cob)",
+                "1 tablespoon olive oil",
+                "1/2 red bell pepper (chopped)",
+                "1/2 red onion (small, finely chopped)",
+                "1/2 cup fresh cilantro (chopped)",
+                "6 green onions (chopped)",
+                "1 jalapeno pepper (diced)",
+                "1/2 avocado (chopped)",
+                "4 tablespoons lime juice (from about 2 limes)",
+                "1/2 teaspoon cumin (ground)",
+                "1/2 teaspoon smoked paprika",
+                "1/4 teaspoon black pepper (ground)",
+                "1/4 teaspoon salt",
+                "2 tablespoons sour cream (or yogurt)",
+                "2 tablespoons mayonnaise",
+                "1/2 cup cotija cheese (or feta, crumbled)"
+            ]
+        },
+        {
+            "name": "Mexican Ground Beef Style Casserole",
+            "ingredients": [
+                "1 pound ground beef",
+                "2 tablespoons olive oil",
+                "1 onion (small, finely diced)",
+                "1 clove garlic (minced)",
+                "1 tablespoon chili powder",
+                "1 teaspoon cumin",
+                "1 cup salsa (Mexican, recipe here)",
+                "salt",
+                "pepper",
+                "1 cup rice",
+                "2 cups shredded cheddar cheese",
+                "1 green onions (slice)"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn",
+            "ingredients": [
+                "3 cans corn (15.25 oz cans)",
+                "2 tablespoons butter",
+                "kosher salt",
+                "3 tablespoons mayonnaise",
+                "2 tablespoons lime juice",
+                "2 teaspoons chili powder (divided)",
+                "cheese (cojita)",
+                "cilantro (roughly chopped)"
+            ]
+        },
+        {
+            "name": "Mexican Stuffed Peppers",
+            "ingredients": [
+                "1 pound lean ground beef",
+                "2 tablespoons taco seasoning (or one packet)",
+                "1 cup rice (cooked)",
+                "2 cups salsa (divided)",
+                "1/2 teaspoon kosher salt",
+                "1/2 teaspoon fresh ground black pepper",
+                "3 bell peppers (split in half and de-seeded, through the stem)",
+                "8 ounces shredded cheddar cheese (divided)"
+            ]
+        },
+        {
+            "name": "Mexican Pizza",
+            "ingredients": [
+                "1/2 pound ground beef (or turkey)",
+                "3 tablespoons taco seasoning",
+                "1/2 cup refried beans",
+                "1/2 cup salsa",
+                "1/2 cup shredded mexican cheese blend (taco-blend)",
+                "2 flour tortillas (10 inch)",
+                "tomatoes",
+                "green onions",
+                "olives"
+            ]
+        },
+        {
+            "name": "Mexican Lasagna",
+            "ingredients": [
+                "2 tablespoons olive oil",
+                "2 pounds ground chicken (lean, or turkey)",
+                "2 tablespoons chili powder",
+                "2 teaspoons ground cumin",
+                "1/2 sweet onion (chopped)",
+                "15 ounces black beans",
+                "1 1/2 cups taco sauce (medium or mild heat)",
+                "1 cup frozen corn kernels",
+                "salt",
+                "15 corn tortillas",
+                "1 1/2 cups shredded cheddar cheese",
+                "1 cup pepperjack cheese (shredded)",
+                "green onions (sliced)"
+            ]
+        },
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "1 tablespoon olive oil",
+                "2 cloves garlic (minced)",
+                "1 onion (diced)",
+                "1 1/2 cups basmati rice",
+                "8 ounces tomato sauce",
+                "1 1/2 cups vegetable broth",
+                "1 cup corn kernels",
+                "1/2 cup carrots (diced)",
+                "1/2 cup frozen peas",
+                "1/4 teaspoon chili powder",
+                "1/4 teaspoon cumin",
+                "kosher salt",
+                "freshly ground black pepper",
+                "2 Roma tomatoes (diced)",
+                "2 tablespoons cilantro leaves (chopped fresh)"
+            ]
+        },
+        {
+            "name": "One Pan Mexican Quinoa",
+            "ingredients": [
+                "1 tablespoon olive oil",
+                "2 cloves garlic (minced)",
+                "1 jalapeno (minced)",
+                "1 cup quinoa",
+                "1 cup vegetable broth",
+                "15 ounces black beans (drained and rinsed)",
+                "14.5 ounces diced tomatoes (fire-roasted)",
+                "1 cup corn kernels (frozen, canned or roasted)",
+                "1 teaspoon chili powder",
+                "1/2 teaspoon cumin",
+                "kosher salt",
+                "freshly ground black pepper",
+                "1 avocado (halved, seeded, peeled and diced)",
+                "1 lime",
+                "2 tablespoons cilantro leaves (chopped fresh)"
+            ]
+        },
+        {
+            "name": "Authentic Mexican Rice",
+            "ingredients": [
+                "1/4 cup cooking oil",
+                "1 cup rice (I used Jasmine, but that's because it's my favorite)",
+                "2 cloves garlic (minced or 1 teaspoon garlic paste)",
+                "1/4 cup diced onions (yellow or white)",
+                "1 chicken bouillon cube",
+                "1 1/2 cups hot water",
+                "8 ounces tomato sauce",
+                "salt",
+                "pepper",
+                "1/4 teaspoon cilantro (dried, optional)"
+            ]
+        },
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "1 cup long-grain rice (uncooked)",
+                "2 cups chicken broth",
+                "1 tablespoon butter",
+                "1/2 cup salsa",
+                "1 teaspoon garlic salt",
+                "1/2 teaspoon ground cumin"
+            ]
+        },
+        {
+            "name": "Mexican Pinto Beans",
+            "ingredients": [
+                "1 pound pinto beans",
+                "8 cups water",
+                "1/2 teaspoon cumin",
+                "1/2 teaspoon smoked paprika",
+                "1/2 teaspoon garlic powder",
+                "1/2 teaspoon onion powder",
+                "1/4 teaspoon cayenne pepper",
+                "salt (to taste)",
+                "cilantro (for topping, optional)"
+            ]
+        },
+        {
+            "name": "Mexican Mangonada",
+            "ingredients": [
+                "6 mangoes (fresh)",
+                "1 cup mangoes (frozen)",
+                "3 teaspoons sauce (chamoy)",
+                "3 cups ice",
+                "1/2 cup sugar",
+                "3 shots tequila (or rum, optional)",
+                "sprinkles (tajin, to taste)",
+                "tamarind (straws, for garnish, optional)",
+                "mango (wedges, for garnish, optional)"
+            ]
+        },
+        {
+            "name": "Easy Mexican Corn and Rice Casserole",
+            "ingredients": [
+                "nonstick cooking spray",
+                "4 cups frozen corn kernels (thawed and drained)",
+                "3 cups cooked rice",
+                "2 cups prepared salsa",
+                "1/2 cup sour cream",
+                "2 large scallions (minced)",
+                "1 1/2 teaspoons ground cumin",
+                "3/4 teaspoon garlic powder",
+                "1 teaspoon salt",
+                "1/4 teaspoon black pepper",
+                "1/2 cup shredded Mexican blend cheese (for corn mixture)",
+                "1 cup shredded Mexican blend cheese (for topping)"
+            ]
+        },
+        {
+            "name": "Easy Mexican Casserole",
+            "ingredients": [
+                "1 pound ground beef",
+                "1 medium onion (diced)",
+                "1 jalape\u00f1o",
+                "4 ounces green chilies",
+                "2 tablespoons taco seasoning (1 package)",
+                "1 can fire roasted diced tomatoes (14 oz)",
+                "1 can pinto beans (16 oz)",
+                "2 cups tortilla chips (crushed)",
+                "1 1/2 cups sour cream",
+                "1/4 cup black olives (sliced)",
+                "1 cup monterey jack (shredded)",
+                "1 cup cheddar (shredded)",
+                "1/4 cup green onion (chopped, for garnish, optional)"
+            ]
+        },
+        {
+            "name": "Mexican Street Corn",
+            "ingredients": [
+                "4 ears of corn",
+                "1 tablespoon butter (softened)",
+                "1 tablespoon mayonnaise",
+                "1/4 cup crumbled Cotija cheese (can also use queso fresco or even parmesan cheese)",
+                "chili powder",
+                "1 lime",
+                "1 tablespoon chopped cilantro"
+            ]
+        },
+        {
+            "name": "Mexican Rice",
+            "ingredients": [
+                "14.5 ounces petite diced tomatoes (can of)",
+                "1 white onion (medium, diced)",
+                "3 jalapenos (medium, diced)",
+                "2 cups long grain white rice",
+                "1/3 cup canola oil",
+                "4 garlic cloves (minced)",
+                "2 cups chicken broth",
+                "2 tablespoons tomato paste",
+                "salt (to taste)",
+                "1/2 cup fresh cilantro (minced)",
+                "1 lime"
+            ]
+        },
+        {
+            "name": "Grilled Mexican Street Corn",
+            "ingredients": [
+                "4 ears corn",
+                "1/2 cup mayonnaise",
+                "1 1/2 cups sour cream",
+                "1/4 cup chopped cilantro (freshly)",
+                "1 cup freshly grated Parmesan",
+                "1 lime (juiced)",
+                "red chili powder (to taste)",
+                "2 limes (cut into wedges, for garnish, optional)"
+            ]
+        },
+        {
+            "name": "Mexican Black Beans",
+            "ingredients": [
+                "1 teaspoon olive oil",
+                "1/2 cup chopped onions",
+                "3 cloves garlic (minced)",
+                "1 black beans (16 oz can, do not drain)",
+                "1/4 cup chopped cilantro",
+                "1 teaspoon cumin",
+                "1/2 teaspoon salt"
+            ]
+        },
+        {
+            "name": "Mexican Pork Steaks",
+            "ingredients": [
+                "4 pork blade steaks (1/2-inch thick)",
+                "1 teaspoon vegetable oil",
+                "1 cup salsa (chunky)",
+                "1/3 cup water",
+                "2 tablespoons lemon juice",
+                "1/2 teaspoon ground cumin",
+                "salt (to taste)"
+            ]
+        },
+        {
+            "name": "Mexican Dry Rub",
+            "ingredients": [
+                "1 tablespoon chili powder",
+                "1 teaspoon brown sugar",
+                "1 teaspoon ground cumin",
+                "1/2 teaspoon ground cinnamon",
+                "1/2 teaspoon cayenne",
+                "1/4 teaspoon salt"
+            ]
+        },
+        {
+            "name": "Mexican Eggplant",
+            "ingredients": [
+                "1 chili (dried Mulato)",
+                "3 tablespoons hot water",
+                "1 eggplant (peeled and cut into 2 cm cubes)",
+                "3 garlic cloves (chopped finely)",
+                "2 tablespoons oil",
+                "3/4 teaspoon cumin",
+                "1/4 teaspoon chili flakes",
+                "1 teaspoon salt",
+                "3/4 teaspoon coriander (dried)",
+                "1/2 lime",
+                "1 handful coriander leaves (fresh)",
+                "3 tablespoons yoghurt (natural)"
+            ]
+        },
+        {
+            "name": "Low Carb Mexican Casserole",
+            "ingredients": [
+                "1 pound ground beef",
+                "1 jalapeno pepper (seeded & chopped)",
+                "1/2 red bell pepper (medium, chopped)",
+                "1 garlic clove (minced)",
+                "12 ounces cauliflower rice (steamed)",
+                "10 ounces diced tomatoes with green chiles (drained)",
+                "1 1/2 tablespoons taco seasoning (divided)",
+                "1/4 teaspoon garlic powder",
+                "1 1/2 cups shredded Mexican blend cheese (divided)",
+                "1/4 cup water"
+            ]
+        },
+        {
+            "name": "Mexican Cornbread Casserole",
+            "ingredients": [
+                "2 boxes cornbread mix",
+                "1 pound ground beef",
+                "1 can chilies (chopped greeen)",
+                "1 package taco seasoning mix",
+                "1 can corn (regular)",
+                "1 can creamed corn",
+                "1 1/2 cups cheddar cheese (shredded)"
+            ]
+        }
+    ]
+}
