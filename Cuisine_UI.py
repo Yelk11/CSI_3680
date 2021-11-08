@@ -45,11 +45,10 @@ def style_Select(x):
         pass
     elif drop_site.get() == "Epicurious":
         pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
+        print('PDF printed')
     elif drop_site.get() == "Damndelicous":
-        pdf.write_to_pdf(delicious.get_recipe(drop_style.get()))
-
-
-
+        pdf.write_to_pdf(delicious.yummly(drop_style.get()))
+        print('PDF printed')
 
 #bind
 drop_site.bind("<<ComboboxSelected>>", web_Select)
