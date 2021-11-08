@@ -29,7 +29,3 @@ def yummly(category):
     recipe_list.append(get_recipe(url))
 
   return json.dumps(json, indent=4)
-
-parker = yummly("mexican")
-
-print (parker)
