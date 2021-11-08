@@ -27,5 +27,3 @@ def yummly(category):
 
   aJson = json.dumps(json_data)
   return json.dumps(aJson, indent=4)
-
-yummly('mexican')
