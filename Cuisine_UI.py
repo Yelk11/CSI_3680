@@ -10,9 +10,9 @@ import pdf_printer as pdf
 #UI text
 print('Get Cooking.....')
 
-root = Tk()
-root.title('Recipe Scraper')
-root.geometry("500x400")
+Hungry = Tk()
+Hungry.title('Recipe Scraper')
+Hungry.geometry("500x400")
 #lists
 Websites = [
     "All Recipes",
@@ -21,10 +21,10 @@ Websites = [
     ]
 
 
-drop_site = ttk.Combobox(root, value = Websites)
+drop_site = ttk.Combobox(Hungry, value = Websites)
 drop_site.pack(pady = 20)
 
-drop_style = ttk.Combobox(root)
+drop_style = ttk.Combobox(Hungry)
 drop_style.pack(pady = 20)
 
 
@@ -40,23 +40,23 @@ def web_Select(e):
 
 
 def style_Select(x):
+    print('hello')
     if drop_site.get() == "All Recipes":
         pass
     elif drop_site.get() == "Epicurious":
         pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
-        print('done')
     elif drop_site.get() == "Damndelicous":
         pdf.write_to_pdf(delicious.get_recipe(drop_style.get()))
-        print('done')
 
 
 
 
 #bind
 drop_site.bind("<<ComboboxSelected>>", web_Select)
+drop_style.bind("<<ComboboxSelected>>", style_Select)
 
 
-root.mainloop()
+Hungry.mainloop()
 
 
 
