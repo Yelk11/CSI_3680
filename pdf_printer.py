@@ -3,6 +3,7 @@
 #Project
 
 import epicurious_scraper as epic
+import damndelicious_scraper as delicious
 import json
 from fpdf import FPDF
 
@@ -14,7 +15,11 @@ pdf.add_font("Roboto Slab", '', "RobotoSlab-Regular.ttf", uni=True)
 
 matt = epic.epicurious_scraper("mexican")
 
+parker = delicious.yummly("mexican")
+
 recipes = json.loads(matt)
+
+recipes2 = json.loads(parker)
 
 
 for recipe in recipes["recipe"]:
@@ -23,7 +28,16 @@ for recipe in recipes["recipe"]:
     for ingredient in recipe["ingredients"]:
         pdf.set_font('Roboto Slab', '', 10)
         pdf.cell(0, 10, ingredient, ln=True)
-    #pdf.multi_cell(0, 10, recipe["directions"])
+    #pdf.cell(0, 10, recipe["directions"])
+    pdf.add_page()
+
+for recipe in recipes2["recipe"]:
+    pdf.set_font('Roboto Slab', '', 12)
+    pdf.cell(0, 10, recipe["name"], ln=True)
+    for ingredient in recipe["ingredients"]:
+        pdf.set_font('Roboto Slab', '', 10)
+        pdf.cell(0, 10, ingredient, ln=True)
+    #pdf.cell(0, 10, recipe["directions"])
     pdf.add_page()
     
 
