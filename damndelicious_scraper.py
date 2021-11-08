@@ -1,18 +1,15 @@
 from recipe_scrapers import scrape_me
 import json, re
 
-json=[]
+aJson= {}
+json_data = []
 def get_recipe(url):
   scraper = scrape_me('https://www.yummly.com'+ url)
-  json.append({
+  json_data.append({
       "name":scraper.title(),
-      "time":str(scraper.total_time()) + ' minutes',
-      "yield":scraper.yields(),
       "ingredients":scraper.ingredients(),
-      "instructions":scraper.instructions()
     })
-  
-
+ 
 def yummly(category):
   yummly = "https://www.yummly.com/recipes?q=" + category + "&taste-pref-appended=true"
   scraper = scrape_me(yummly)
@@ -28,4 +25,7 @@ def yummly(category):
   for url in link_list:
     recipe_list.append(get_recipe(url))
 
-  return json.dumps(json, indent=4)
+  aJson = json.dumps(json_data)
+  return json.dumps(aJson, indent=4)
+
+yummly('mexican')
