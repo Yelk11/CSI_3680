@@ -28,5 +28,8 @@ def yummly(category):
   for url in link_list:
     recipe_list.append(get_recipe(url))
 
-  return json
+  return json.dumps(json, indent=4)
 
+parker = yummly("mexican")
+
+print (parker)
