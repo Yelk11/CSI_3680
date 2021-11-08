@@ -28,7 +28,7 @@ drop_style = ttk.Combobox(Hungry)
 drop_style.pack(pady = 20)
 
 
-def web_Select(e):
+def web_Select():
     if drop_site.get() == "All Recipes":
         pass
     elif drop_site.get() == "Epicurious":
@@ -39,7 +39,7 @@ def web_Select(e):
 
 
 
-def style_Select(x):
+def style_Select():
     print('hello')
     if drop_site.get() == "All Recipes":
         pass

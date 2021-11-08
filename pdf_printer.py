@@ -12,7 +12,7 @@ def write_to_pdf(input_json):
     # setup pdf file
     pdf.add_page()
     pdf.add_font('Roboto', '', 'Roboto-Black.ttf', uni=True)
-    pdf.set_font("Roboto", '', 16)
+    pdf.set_font("Roboto", '', 12)
 
     recipes = json.loads(input_json)
     for recipe in recipes["recipe"]:
