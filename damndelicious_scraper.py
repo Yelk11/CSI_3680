@@ -23,12 +23,10 @@ def yummly(category):
       link = line.get('href')
       if re.search("/recipe/", link) and link not in link_list:
         link_list.append(link)
-  print(link_list)
   
-  json = []
   recipe_list = []
   for url in link_list:
     recipe_list.append(get_recipe(url))
 
-yummly('mexican')
-print(json)
+  return json
+
