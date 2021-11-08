@@ -3,13 +3,16 @@ import webbrowser,sys,pyperclip
 import requests,bs4
 from tkinter import *
 from tkinter import ttk
+import epicurious_scraper as epic
+import damndelicious_scraper as delicious
+import pdf_printer as pdf
 
 #UI text
 print('Get Cooking.....')
 
-Hungry = Tk()
-Hungry.title('Recipe Scraper')
-Hungry.geometry("500x400")
+root = Tk()
+root.title('Recipe Scraper')
+root.geometry("500x400")
 #lists
 Websites = [
     "All Recipes",
@@ -17,55 +20,43 @@ Websites = [
     "Damndelicous"
     ]
 
-Flavor = [
-    "Chinese",
-    "Japanese",
-    "Indian",
-    "Mexican",
-    "Italian",
-    "Cajun",
-    "American"
-    ]
-#call functions
+
+drop_site = ttk.Combobox(root, value = Websites)
+drop_site.pack(pady = 20)
+
+drop_style = ttk.Combobox(root)
+drop_style.pack(pady = 20)
+
 
 def web_Select(e):
     if drop_site.get() == "All Recipes":
-        webbrowser.open('https://www.allrecipes.com')
+        pass
     elif drop_site.get() == "Epicurious":
-        webbrowser.open('https://www.epicurious.com/')
+        drop_style['value'] = epic.get_cuisines()
     elif drop_site.get() == "Damndelicous":
-        webbrowser.open('https://damndelicious.net')
-        
-def style_Select(x):
-    if drop_style.get() == "Chinese":
-        print("I want Chinese")
-    elif drop_style.get() == "Japanese":
-        print("I want Japanese")
-    elif drop_style.get() == "Indian":
-        print("I want Indian")
-    elif drop_style.get() == "Mexican":
-        print("I want Mexican")
-    elif drop_style.get() == "Italian":
-        print("I want Italian")
-    elif drop_style.get() == "Cajun":
-        print("I want Cajun")
-    elif drop_style.get() == "American":
-        print("I want American")
-    
-#drop down 1
-drop_site = ttk.Combobox(Hungry, value = Websites)
-drop_site.pack(pady = 20)
+        drop_style['value'] = delicious.get_cuisines()
 
-#drop down 2
-drop_style = ttk.Combobox(Hungry, value = Flavor)
-drop_style.pack(pady = 20)
+
+
+
+def style_Select(x):
+    if drop_site.get() == "All Recipes":
+        pass
+    elif drop_site.get() == "Epicurious":
+        pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
+        print('done')
+    elif drop_site.get() == "Damndelicous":
+        pdf.write_to_pdf(delicious.get_recipe(drop_style.get()))
+        print('done')
+
+
+
 
 #bind
 drop_site.bind("<<ComboboxSelected>>", web_Select)
-drop_style.bind("<<ComboboxSelected>>", style_Select)
 
 
-Hungry.mainloop()
+root.mainloop()
 
 
 

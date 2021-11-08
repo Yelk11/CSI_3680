@@ -30,8 +30,16 @@ def yummly(category):
   
   return json.dumps(recipe_list, indent=4)
 
-# out = yummly('mexican')
-# print(type(out))
-# print(out)
-# with open('out.json', 'w') as f:
-#   f.write(out)
+# check that all cuisines are present
+def get_cuisines():
+  cuisine = [
+    "italian",
+    "asian",
+    "mexican",
+    "french",
+    "southwestern",
+    "barbecue",
+    "indian",
+    "chinese",
+  ]
+  return cuisine
