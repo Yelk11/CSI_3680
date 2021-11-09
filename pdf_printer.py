@@ -19,9 +19,8 @@ def write_to_pdf(input_json):
         pdf.cell(0, 10, recipe['name'], ln=True)
         for ingredient in recipe["ingredients"]:
             pdf.cell(0, 10, ingredient, ln=True)
-        #pdf.multi_cell(0, 10, recipe["directions"], ln=True) - giving a uni error
+        pdf.multi_cell(0, 10, recipe["directions"])
         pdf.add_page()
-
     pdf.output('recipes.pdf')
 
 
