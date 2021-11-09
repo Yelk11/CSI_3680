@@ -4,7 +4,7 @@ import requests,bs4
 from tkinter import *
 from tkinter import ttk
 import epicurious_scraper as epic
-import damndelicious_scraper as delicious
+import yummly_scraper as delicious
 import pdf_printer as pdf
 
 #UI text
@@ -16,7 +16,7 @@ Hungry.geometry("500x400")
 
 Websites = [
     "Epicurious",
-    "Damndelicous"
+    "Yummly"
     ]
 
 
@@ -30,16 +30,18 @@ drop_style.pack(pady = 20)
 def web_Select(x):
     if drop_site.get() == "Epicurious":
         drop_style['value'] = epic.get_cuisines()
-    elif drop_site.get() == "Damndelicous":
+    elif drop_site.get() == "Yummly":
         drop_style['value'] = delicious.get_cuisines()
 
 def style_Select(x):
     if drop_site.get() == "Epicurious":
+        print('Pdf writer started...')
         pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
         print('PDF printed')
-    elif drop_site.get() == "Damndelicous":
+    elif drop_site.get() == "Yummly":
+        print('Pdf writer started...')
         pdf.write_to_pdf(delicious.yummly(drop_style.get()))
-        print('PDF printed')
+        print('PDF printed!')
 
 #bind
 drop_site.bind("<<ComboboxSelected>>", web_Select)
