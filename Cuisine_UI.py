@@ -6,6 +6,7 @@ from tkinter import ttk
 import epicurious_scraper as epic
 import yummly_scraper as delicious
 import pdf_printer as pdf
+import htmlPrint
 
 #UI text
 print('Get Cooking.....')
@@ -36,7 +37,8 @@ def web_Select(x):
 def style_Select(x):
     if drop_site.get() == "Epicurious":
         print('Pdf writer started...')
-        pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
+      #  pdf.write_to_pdf(epic.epicurious_scraper(drop_style.get()))
+        htmlPrint.html_printer(epic.epicurious_scraper(drop_style.get()))
         print('PDF printed')
     elif drop_site.get() == "Yummly":
         print('Pdf writer started...')
@@ -49,3 +51,13 @@ drop_style.bind("<<ComboboxSelected>>", style_Select)
 
 
 Hungry.mainloop()
+
+
+
+
+
+
+
+
+
+
