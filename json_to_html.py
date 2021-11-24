@@ -25,5 +25,5 @@ def write_to_html(input_json):
         pdf.add_page()
     pdf.output('recipes.pdf')
 
-    infoFromJson = json.loads(jsonfile)
+    infoFromJson = json.loads(input_json)
     json2html.convert(json = infoFromJson)
