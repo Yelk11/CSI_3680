@@ -25,6 +25,22 @@ def write_to_html(input_json):
     pdf.output('recipes.pdf')
 
 
+    pdfFileObj = open('recipes.pdf', 'rb')
+
+    pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+
+    pageObj = pdfReader.getPage(0)
+
+    text = pageObj.extractText()
+
+    print(text)
+
+    html2="<p>" +text+ "</p>"
+    
+    pdfFileObj.close()
+
+    
+    
     html="""
     <html>
         <body>
@@ -37,5 +53,5 @@ def write_to_html(input_json):
     """
 
     file = open('recipes.html','w')
-    file.write(html)
+    file.write(html2)
     file.close()
