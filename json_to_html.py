@@ -4,11 +4,10 @@
 
 import json
 import PyPDF2
-from json2html import *
 from fpdf import FPDF
 
 def write_to_html(input_json):
-    
+
     pdf = FPDF('P', 'mm', 'A4')
 
     # setup pdf file
@@ -25,5 +24,18 @@ def write_to_html(input_json):
         pdf.add_page()
     pdf.output('recipes.pdf')
 
-    infoFromJson = json.loads(input_json)
-    json2html.convert(json = infoFromJson)
+
+    html="""
+    <html>
+        <body>
+            <h1>Recipes</h1>
+            <h2>Name goes here</h2>
+                <p> ingredients go here </p>
+                <p> instructions go here </p>
+        </body>
+    </html>
+    """
+
+    file = open('recipes.html','w')
+    file.write(html)
+    file.close()
