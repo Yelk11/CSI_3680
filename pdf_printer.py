@@ -7,7 +7,6 @@ import PyPDF2
 from fpdf import FPDF
 from PyPDF2 import PdfFileReader
 from json2html import *
-import fitz
 
 def write_to_pdf(input_json):
     pdf = FPDF('P', 'mm', 'A4')
@@ -26,13 +25,3 @@ def write_to_pdf(input_json):
         pdf.multi_cell(0, 10, recipe["directions"])
         pdf.add_page()
     pdf.output('recipes.pdf')
-
-    #Scrape PDF
-    with fitz.open("recipes.pdf") as doc:
-        text = ""
-        for page in doc:
-            text += page.getText()
-            html2=("<h1>Recipes</h1>"+("<p>"+text+"<br>"+"</p>"))
-            file = open('recipes.html','w')
-            file.write(html2)
-        file.close()
