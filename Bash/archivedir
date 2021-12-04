@@ -6,11 +6,12 @@ compress=gzip              # Change to your favorite compress app.
 progname=$(basename $0)    # Nicer output format for error messages
 #basename is the program name archivdir $0 means
 
-if [ $# -eq 0 ] ; then      # No args? That's a problem. | $# = Number of paramaters used, -eq = equals.  Thus, If no paramaters used go to next line
+if [ $# -eq 0 ] ; then      # No args? That's a problem. | $# = Number of paramaters used, -eq = equals.  
+#Thus, If no paramaters used go to next line
   echo "Usage: $progname directory" >&2 ;exit 1 #Print Usage: archivedir  directory and exit program
 fi # End if Statement
 
-if [ ! -d $1 ] ; then # ! = following expression is false, -d means the file exists and is a directory, $1 is our first parameter. 
+if [ ! -d $1 ] ; then # ! means the following expression is false, -d means the file exists and is a directory, $1 is our first parameter. 
 #Thus, if the file does not exist and is not a directory proceed to the echo statement below
   echo "${progname}: can't find directory $1 to archive." >&2; exit 1
 fi # End if Statement
@@ -20,7 +21,8 @@ if [ "$(basename $1)" != "$1" -o "$1" = "." ] ; then
   exit 1
 fi # End if Statement
 
-if [ ! -w . ] ; then
+if [ ! -w . ] ; then # ! means the following expression is false, -w means the file exits and we have write permission 
+#Thus, if we do not have write permission move to the statement below
   echo "${progname}: cannot write archive file to current directory." >&2
   exit 1
 fi # End if Statement
