@@ -49,4 +49,22 @@ else
   echo "Warning: tar encountered errors archiving $1" #echo prints statement 
 fi # End if Statement
 
+if tar -cf $1 | $compress > $archivename2 ; then
+  echo "Directory $1 archived as $archivename2"  #echo prints statement 
+else
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+fi # End if Statement
+
+if tar -cf $1 | $compress > $archivename3 ; then
+  echo "Directory $1 archived as $archivename3"  #echo prints statement 
+else
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+fi # End if Statement
+
+if tar -cf $1 | $compress > $archivename4 ; then
+  echo "Directory $1 archived as $archivename4"  #echo prints statement 
+else
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+fi # End if Statement
+
 exit 0     #exit succesfully 
