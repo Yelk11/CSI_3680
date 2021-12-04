@@ -7,41 +7,41 @@ progname=$(basename $0)    # Nicer output format for error messages
 #basename is the program name archivdir $0 means
 
 if [ $# -eq 0 ] ; then      # No args? That's a problem. | $# = Number of paramaters used, -eq = equals.  Thus, If no paramaters used go to next line
-  echo "Usage: $progname directory" >&2 ;exit 1 #Print Usage: archivedir  directory and exit program
+  echo "Usage: $progname directory" >&2 ;exit 1 #Print Usage: archivedir  directory and exit program, >&2 redirects to standard error, & is a file descriptor not a file
 fi # End if Statement
 
 if [ ! -d $1 ] ; then # ! means the following expression is false, -d means the file exists and is a directory, $1 is our first parameter. Thus, if the file does not exist and is not a directory proceed to the echo statement below
-  echo "${progname}: can't find directory $1 to archive." >&2; exit 1
+  echo "${progname}: can't find directory $1 to archive." >&2; exit 1   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
 fi # End if Statement
 
-if [ "$(basename $1)" = "$1" -o "$1" = "." ] ; then 
-  echo "${progname}: you must specify a subdirectory" >&2
+if [ "$(basename $1)" = "$1" -o "$1" = "." ] ; then   #if subdirectory does not exist, -o?
+  echo "${progname}: you must specify a subdirectory" >&2   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
   exit 1    #exit with general errors 
 fi # End if Statement
 
 if [ ! -w . ] ; then # ! means the following expression is false, -w means the file exits and we have write permission. Thus, if we do not have write permission move to the statement below
-  echo "${progname}: cannot write archive file to current directory." >&2
+  echo "${progname}: cannot write archive file to current directory." >&2   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
   exit 1    #exit with general errors
 fi # End if Statement
 
 # Is the resultant archive going to be dangerously big? Let's check...
 
-dirsize="$(du -s $1 | awk '{print $1}')"
+dirsize="$(du -s $1 | awk '{print $1}')"  #disk usage displays only a total for each argument, awk prints argument $1
 
 if [ $dirsize -gt $maxarchivedir ] ; then #-gt is if the first value is larger than the second. Thus, if size of file is larger than our max number set at the start of the script, continue to statement below
   echo -n "Warning: directory $1 is $dirsize blocks. Proceed? [n] " #echo is print , -n is not to append new line so next statement is on same line, $1 is our first parameter (directory), $dirsize is the size of that directory
   read answer # read means read what the user has typed. You can technically type anything but if you don't use Y or y it will utilize the if statement below
-  answer="$(echo $answer | tr '[:upper:]' '[:lower:]' | cut -c1)" 
+  answer="$(echo $answer | tr '[:upper:]' '[:lower:]' | cut -c1)"   # answer is set equal to an echo statement, echo is a printed statement, [upper] upper case, [lower] lower case
   if [ "$answer" != "y" ] ; then # $answer is our variable created from user input, != means does not equal. Thus, if the converted user answer does not equal y move to the statement below
-    echo "${progname}: archive of directory $1 canceled." >&2
+    echo "${progname}: archive of directory $1 canceled." >&2   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
     exit 0    #exit succesfully 
   fi # End inner if Statement
 fi # End outer if Statement
 
-archivename="$1.tgz"
-archivename2="$1.bzip2"
-archivename3="$1.xz"
-archivename4="$1.zip" 
+archivename="$1.tgz"  #archive set to .tgz compression 
+archivename2="$1.bzip2" #archive set to .bzip2 compression 
+archivename3="$1.xz"  #archive set to .xz compression 
+archivename4="$1.zip" #archive set to .zip compression 
 
 if tar -cf $1 | $compress > $archivename ; then #if tar is able to create and specify new archive for $1. $compress is redirected to archivename
   echo "Directory $1 archived as $archivename"  #echo prints statement 
