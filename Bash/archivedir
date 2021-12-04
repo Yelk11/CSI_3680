@@ -10,7 +10,8 @@ if [ $# -eq 0 ] ; then      # No args? That's a problem. | $# = Number of parama
   echo "Usage: $progname directory" >&2 ;exit 1 #Print Usage: archivedir  directory and exit program
 fi # End if Statement
 
-if [ ! -d $1 ] ; then
+if [ ! -d $1 ] ; then # ! = following expression is false, -d means the file exists and is a directory, $1 is our first parameter. 
+#Thus, if the file does not exist and is not a directory proceed to the echo statement below
   echo "${progname}: can't find directory $1 to archive." >&2; exit 1
 fi # End if Statement
 
