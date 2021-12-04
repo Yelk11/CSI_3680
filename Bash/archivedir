@@ -44,9 +44,9 @@ archivename="$1.xz"
 archivename="$1.zip" 
 
 if tar -cf $1 | $compress > $archivename ; then
-  echo "Directory $1 archived as $archivename"
+  echo "Directory $1 archived as $archivename"  #echo prints statement 
 else
-  echo "Warning: tar encountered errors archiving $1" 
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
 fi # End if Statement
 
 exit 0     #exit succesfully 
