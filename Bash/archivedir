@@ -16,12 +16,12 @@ fi # End if Statement
 
 if [ "$(basename $1)" != "$1" -o "$1" = "." ] ; then 
   echo "${progname}: you must specify a subdirectory" >&2
-  exit 1
+  exit 1    #exit with general errors 
 fi # End if Statement
 
 if [ ! -w . ] ; then # ! means the following expression is false, -w means the file exits and we have write permission. Thus, if we do not have write permission move to the statement below
   echo "${progname}: cannot write archive file to current directory." >&2
-  exit 1
+  exit 1    #exit with general errors
 fi # End if Statement
 
 # Is the resultant archive going to be dangerously big? Let's check...
@@ -34,7 +34,7 @@ if [ $dirsize -gt $maxarchivedir ] ; then #-gt is if the first value is larger t
   answer="$(echo $answer | tr '[:upper:]' '[:lower:]' | cut -c1)" 
   if [ "$answer" != "y" ] ; then # $answer is our variable created from user input, != means does not equal. Thus, if the converted user answer does not equal y move to the statement below
     echo "${progname}: archive of directory $1 canceled." >&2
-    exit 0
+    exit 0    #exit succesfully 
   fi # End inner if Statement
 fi # End outer if Statement
 
@@ -46,4 +46,4 @@ else
   echo "Warning: tar encountered errors archiving $1" 
 fi # End if Statement
 
-exit 0
+exit 0     #exit succesfully 
