@@ -39,9 +39,9 @@ if [ $dirsize -gt $maxarchivedir ] ; then #-gt is if the first value is larger t
 fi # End outer if Statement
 
 archivename="$1.tgz"
-archivename="$1.bzip2"
-archivename="$1.xz"
-archivename="$1.zip" 
+archivename2="$1.bzip2"
+archivename3="$1.xz"
+archivename4="$1.zip" 
 
 if tar -cf $1 | $compress > $archivename ; then
   echo "Directory $1 archived as $archivename"  #echo prints statement 
