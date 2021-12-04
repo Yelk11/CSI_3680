@@ -14,7 +14,7 @@ if [ ! -d $1 ] ; then # ! means the following expression is false, -d means the 
   echo "${progname}: can't find directory $1 to archive." >&2; exit 1
 fi # End if Statement
 
-if [ "$(basename $1)" != "$1" -o "$1" = "." ] ; then 
+if [ "$(basename $1)" = "$1" -o "$1" = "." ] ; then 
   echo "${progname}: you must specify a subdirectory" >&2
   exit 1    #exit with general errors 
 fi # End if Statement
@@ -43,7 +43,7 @@ archivename="$1.bzip2"
 archivename="$1.xz"
 archivename="$1.zip" 
 
-if tar cf - $1 | $compress > $archivename ; then
+if tar -cf $1 | $compress > $archivename ; then
   echo "Directory $1 archived as $archivename"
 else
   echo "Warning: tar encountered errors archiving $1" 
