@@ -14,7 +14,7 @@ if [ ! -d $1 ] ; then # ! means the following expression is false, -d means the 
   echo "${progname}: can't find directory $1 to archive." >&2; exit 1   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
 fi # End if Statement
 
-if [ "$(basename $1)" = "$1" -o "$1" = "." ] ; then   #if subdirectory does not exist, -o?
+if [ "$(basename $1)" = "$1" -o "$1" = "." ] ; then   #if subdirectory does not exist, -o is an "OR" statement, if basename or current directory does equal the directory we are compressing
   echo "${progname}: you must specify a subdirectory" >&2   #echo prints statement, >&2 redirects to standard error, & is a file descriptor not a file
   exit 1    #exit with general errors 
 fi # End if Statement
@@ -38,33 +38,33 @@ if [ $dirsize -gt $maxarchivedir ] ; then #-gt is if the first value is larger t
   fi # End inner if Statement
 fi # End outer if Statement
 
-archivename="$1.tgz"  #archive set to .tgz compression 
-archivename2="$1.bzip2" #archive set to .bzip2 compression 
-archivename3="$1.xz"  #archive set to .xz compression 
-archivename4="$1.zip" #archive set to .zip compression 
+archivename="$1.tgz"  #archive set to .tgz compression, $1 is the first parameter or in this case the directoy we are compressing
+archivename2="$1.bzip2" #archive set to .bzip2 compression, $1 is the first parameter or in this case the directoy we are compressing 
+archivename3="$1.xz"  #archive set to .xz compression, $1 is the first parameter or in this case the directoy we are compressing
+archivename4="$1.zip" #archive set to .zip compression, $1 is the first parameter or in this case the directoy we are compressing 
 
 if tar -cf $1 | $compress > $archivename ; then #if tar is able to create and specify new archive for $1. $compress is redirected to archivename
   echo "Directory $1 archived as $archivename"  #echo prints statement 
 else
-  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement, $1 is the first parameter or in this case the directoy we are compressing
 fi # End if Statement
 
 if tar -cf $1 | $compress > $archivename2 ; then  #if tar is able to create and specify new archive for $1. $compress is redirected to archivename2
   echo "Directory $1 archived as $archivename2"  #echo prints statement 
 else
-  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement, $1 is the first parameter or in this case the directoy we are compressing
 fi # End if Statement
 
 if tar -cf $1 | $compress > $archivename3 ; then  #if tar is able to create and specify new archive for $1. $compress is redirected to archivename3
   echo "Directory $1 archived as $archivename3"  #echo prints statement 
 else
-  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement, $1 is the first parameter or in this case the directoy we are compressing
 fi # End if Statement
 
 if tar -cf $1 | $compress > $archivename4 ; then  #if tar is able to create and specify new archive for $1. $compress is redirected to archivename4
   echo "Directory $1 archived as $archivename4"  #echo prints statement 
 else
-  echo "Warning: tar encountered errors archiving $1" #echo prints statement 
+  echo "Warning: tar encountered errors archiving $1" #echo prints statement, $1 is the first parameter or in this case the directoy we are compressing
 fi # End if Statement
 
 exit 0     #exit succesfully 
